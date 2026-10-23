@@ -14,7 +14,7 @@
 <meta property="og:url" content="https://beatrixyvett.com/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"HealthClub","name":"Beatrix Yvett - Antrenor personal","url":"https://beatrixyvett.com/","sameAs":["https://www.instagram.com/beatrixyvett.pt"],"address":{"@type":"PostalAddress","addressLocality":"Cluj-Napoca","addressCountry":"RO"},"description":"Antrenor personal de fitness la 18 Gym Cluj-Napoca."}
@@ -29,10 +29,12 @@
     <a href="#servicii" data-i18n="nav_services">Servicii</a>
     <a href="#rezultate" data-i18n="nav_results">Rezultate</a>
     <a href="#contact" data-i18n="nav_contact">Contact</a>
-    <a class="nav-app" href="https://app.beatrixyvett.com" data-i18n="nav_app">Zona clientelor</a>
+    <div class="lang" id="langBtn" role="group" aria-label="Language">
+      <button type="button" data-lang="ro">RO</button><button type="button" data-lang="hu">HU</button><button type="button" data-lang="en">EN</button>
+    </div>
   </nav>
   <div class="nav-tools">
-    <button class="lang" id="langBtn" type="button" aria-label="Language">EN</button>
+    <a class="ig" href="https://www.instagram.com/beatrixyvett.pt" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6"/></svg></a>
     <button class="burger" id="burger" type="button" aria-label="Meniu" aria-expanded="false"><span></span><span></span></button>
   </div>
 </header>
@@ -42,7 +44,7 @@
 <section class="hero">
   <div class="hero-text">
     <p class="eyebrow" data-i18n="hero_eyebrow">Antrenor personal · 18 Gym Cluj-Napoca</p>
-    <h1 data-i18n="hero_title">Forță, echilibru și un corp pe care te simți bine în el.</h1>
+    <h1 data-i18n-html="hero_title">Forță, echilibru și un corp pe care te simți bine în el.</h1>
     <p class="lead" data-i18n="hero_lead">Antrenamente personalizate, construite pentru obiectivele și ritmul tău. Fără rețete generice, cu rezultate pe care le vezi și le simți.</p>
     <div class="cta-row">
       <a class="btn btn-primary" id="ctaWa" href="#contact" data-i18n="cta_book">Programează o ședință</a>
@@ -50,7 +52,7 @@
     </div>
     <ul class="stats">
       <li><strong>1:1</strong><span data-i18n="stat_1">atenție personalizată</span></li>
-      <li><strong>RO · EN</strong><span data-i18n="stat_2">antrenamente în două limbi</span></li>
+      <li><strong>RO · HU · EN</strong><span data-i18n="stat_2">antrenamente în două limbi</span></li>
       <li><strong>Cluj</strong><span data-i18n="stat_3">și online, oriunde ești</span></li>
     </ul>
   </div>
@@ -167,7 +169,7 @@
 
 <footer class="footer">
   <p>© <span id="yr"></span> Beatrix Yvett</p>
-  <p><a href="https://www.instagram.com/beatrixyvett.pt" target="_blank" rel="noopener">@beatrixyvett.pt</a> · <a href="privacy.html" data-i18n="privacy">Confidențialitate</a> · <a href="https://app.beatrixyvett.com" data-i18n="nav_app">Zona clientelor</a></p>
+  <p><a href="https://www.instagram.com/beatrixyvett.pt" target="_blank" rel="noopener">@beatrixyvett.pt</a> · <a href="privacy.html" data-i18n="privacy">Confidențialitate</a></p>
 </footer>
 
 <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">

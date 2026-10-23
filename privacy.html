@@ -13,9 +13,10 @@
 .legal h2{font-size:1.3rem;margin:28px 0 8px}
 .legal p,.legal li{color:var(--muted)}
 .legal ul{padding-left:20px}
-html[lang=ro] [lang=en],html[lang=en] [lang=ro]{display:none}
+.legal>div[lang]{display:none}
+html[lang=ro] .legal>div[lang=ro],html[lang=en] .legal>div[lang=en],html[lang=hu] .legal>div[lang=hu]{display:block}
 </style>
-<script>try{document.documentElement.lang=localStorage.getItem("by_lang")==="en"?"en":"ro"}catch(e){}</script>
+<script>try{var l=localStorage.getItem("by_lang");document.documentElement.lang=l==="en"||l==="hu"?l:"ro"}catch(e){}</script>
 </head>
 <body>
 <header class="nav scrolled"><a class="brand" href="/">Beatrix <span>Yvett</span></a></header>
@@ -53,6 +54,23 @@ html[lang=ro] [lang=en],html[lang=en] [lang=ro]{display:none}
 <p>Under GDPR you can ask for access, correction or deletion of your data, or withdraw consent. Message us on WhatsApp or Instagram <a href="https://www.instagram.com/beatrixyvett.pt">@beatrixyvett.pt</a>. You may file a complaint with the Romanian authority ANSPDCP (dataprotection.ro).</p>
 <h2>External links</h2>
 <p>The site links to WhatsApp and Instagram, which have their own privacy policies.</p>
+</div>
+
+<div lang="hu">
+<h1>Adatvédelmi tájékoztató</h1>
+<p>Ez az oldal Beatrix Yvett kolozsvári személyi edzőé.</p>
+<h2>Milyen adatokat gyűjtünk</h2>
+<p>Csak azokat, amelyeket a kapcsolatfelvételi űrlapon küldesz el: a neved, a telefonszámod vagy e-mail-címed és az üzeneted.</p>
+<h2>Mire használjuk</h2>
+<p>Kizárólag arra, hogy válaszoljunk az üzenetedre, és egyeztessünk egy edzésről. Nem használjuk reklámra, és soha nem adjuk el.</p>
+<h2>Ki dolgozza fel</h2>
+<p>Az űrlap a Web3Forms szolgáltatást használja, amely e-mailben továbbítja nekünk az üzenetet. Nem használunk követő sütiket, és az oldalon nincsenek fiókok vagy fizetések.</p>
+<h2>Meddig őrizzük meg</h2>
+<p>Ameddig szükséges a válaszadáshoz és az esetleges későbbi együttműködéshez. Kérésedre töröljük.</p>
+<h2>A jogaid</h2>
+<p>A GDPR értelmében kérheted az adataidhoz való hozzáférést, azok helyesbítését vagy törlését, illetve visszavonhatod a hozzájárulásodat. Írj nekünk WhatsAppon vagy Instagramon: <a href="https://www.instagram.com/beatrixyvett.pt">@beatrixyvett.pt</a>. Panaszt tehetsz az ANSPDCP román adatvédelmi hatóságnál (dataprotection.ro).</p>
+<h2>Külső hivatkozások</h2>
+<p>Az oldal a WhatsAppra és az Instagramra hivatkozik, amelyeknek saját adatvédelmi szabályzatuk van.</p>
 </div>
 
 <p><a class="btn btn-ghost" href="/">&larr; beatrixyvett.com</a></p>
