@@ -154,6 +154,15 @@ addEventListener("scroll", () => nav.classList.toggle("scrolled", scrollY > 8), 
 const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold: .12 });
 document.querySelectorAll(".section > *, .hero-text, .hero-media").forEach(el => { el.classList.add("reveal"); io.observe(el); });
 
+// butonul WhatsApp plutitor: ascuns în hero și în secțiunea de contact
+const vizibile = new Set();
+const waFloat = $("#waFloat");
+const ioWa = new IntersectionObserver(es => {
+  es.forEach(e => e.isIntersecting ? vizibile.add(e.target) : vizibile.delete(e.target));
+  waFloat.classList.toggle("show", vizibile.size === 0);
+});
+document.querySelectorAll(".hero, #contact").forEach(el => ioWa.observe(el));
+
 // formular
 $("#form").addEventListener("submit", async e => {
   e.preventDefault();
