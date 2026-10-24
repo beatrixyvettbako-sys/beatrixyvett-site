@@ -50,7 +50,7 @@ const TXT = {
     faq4_q: "Ce aduc la prima ședință?", faq4_a: "Haine comode, încălțăminte sport, un prosop și o sticlă cu apă. De rest mă ocup eu.",
     faq5_q: "Cum programez o ședință?", faq5_a: "Scrie-mi pe WhatsApp sau trimite formularul și stabilim împreună o oră care ți se potrivește.",
     ft_text: "Antrenor personal în Cluj-Napoca și online. Antrenamente personalizate în română, maghiară și engleză.",
-    ft_contact: "Contact", ft_legal: "Legal", privacy: "Confidențialitate",
+    ft_contact: "Contact", ft_legal: "Legal", privacy: "Confidențialitate", ft_credit: "Site creat de Dan Chira",
     wa_msg: "Salut Beatrix! Aș vrea să programez o ședință.",
     wa_svc: "Salut Beatrix! Mă interesează: "
   },
@@ -99,7 +99,7 @@ const TXT = {
     faq4_q: "Mit hozzak az első edzésre?", faq4_a: "Kényelmes ruhát, sportcipőt, egy törölközőt és egy üveg vizet. A többit én intézem.",
     faq5_q: "Hogyan foglalhatok időpontot?", faq5_a: "Írj WhatsAppon vagy küldd el az űrlapot, és együtt megbeszélünk egy neked megfelelő időpontot.",
     ft_text: "Személyi edző Kolozsváron és online. Személyre szabott edzések románul, magyarul és angolul.",
-    ft_contact: "Kapcsolat", ft_legal: "Jogi információk", privacy: "Adatvédelem",
+    ft_contact: "Kapcsolat", ft_legal: "Jogi információk", privacy: "Adatvédelem", ft_credit: "Az oldalt készítette: Dan Chira",
     wa_msg: "Szia Beatrix! Szeretnék időpontot foglalni egy edzésre.",
     wa_svc: "Szia Beatrix! Érdekel: "
   },
@@ -148,7 +148,7 @@ const TXT = {
     faq4_q: "What should I bring to the first session?", faq4_a: "Comfortable clothes, trainers, a towel and a bottle of water. I'll take care of the rest.",
     faq5_q: "How do I book a session?", faq5_a: "Message me on WhatsApp or send the form and we'll find a time that suits you.",
     ft_text: "Personal trainer in Cluj-Napoca and online. Personalised training in Romanian, Hungarian and English.",
-    ft_contact: "Contact", ft_legal: "Legal", privacy: "Privacy",
+    ft_contact: "Contact", ft_legal: "Legal", privacy: "Privacy", ft_credit: "Website by Dan Chira",
     wa_msg: "Hi Beatrix! I'd like to book a session.",
     wa_svc: "Hi Beatrix! I'm interested in: "
   }
@@ -428,14 +428,14 @@ const io = new IntersectionObserver(es => es.forEach(e => {
 }), { threshold: .12 });
 $$(".section:not(.contact) > *, .dark .wrap > *, .contact__content > *, .footer__grid > *").forEach(el => { el.classList.add("reveal"); io.observe(el); });
 
-// butonul WhatsApp plutitor: ascuns în hero și în secțiunea de contact
+// butonul WhatsApp plutitor: ascuns în hero, în secțiunea de contact și la footer
 const vizibile = new Set();
 const waFloat = $("#waFloat");
 const ioWa = new IntersectionObserver(es => {
   es.forEach(e => e.isIntersecting ? vizibile.add(e.target) : vizibile.delete(e.target));
   waFloat.classList.toggle("show", vizibile.size === 0);
 });
-$$("#hero, #contact").forEach(el => ioWa.observe(el));
+$$("#hero, #contact, .footer").forEach(el => ioWa.observe(el));
 
 // formular
 $("#form").addEventListener("submit", async e => {
